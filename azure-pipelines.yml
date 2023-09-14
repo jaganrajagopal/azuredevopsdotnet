@@ -22,23 +22,26 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: VSBuild@1
+- task: DotNetCoreCLI@2
+  
+  displayName: 'dotnet build $(buildConfiguration)'
   inputs:
-    solution: '$(solution)'
-    msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    command: 'build'
+    configuration: $(buildConfiguration)
 
-- task: VSTest@2
+- task: DotNetCoreCLI@2
   inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    command: publish
+    publishWebProjects: True   
+    zipAfterPublish: True    
+
     
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'Azure subscription 1(1b5f28cb-5b3c-419e-84d4-09403138d50c)'
     appType: 'webApp'
     appName: 'dotnetappswebapps'
-    package: '$(build.artifactStagingDirectory)\WebApp.zip'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
     deploymentMethod: 'auto'
- 
+
+
