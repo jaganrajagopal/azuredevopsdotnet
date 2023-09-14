@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "azuredevopsdotnet", "azuredevopsdotnet.csproj", "{F49AD512-7F97-4A40-94E7-9C8821AFD89A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzuredevopsDotnetUnitTest", "..\AzuredevopsDotnetUnitTest\AzuredevopsDotnetUnitTest.csproj", "{968A9EDF-B3A2-4210-84FE-A4699579626A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F49AD512-7F97-4A40-94E7-9C8821AFD89A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F49AD512-7F97-4A40-94E7-9C8821AFD89A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F49AD512-7F97-4A40-94E7-9C8821AFD89A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{968A9EDF-B3A2-4210-84FE-A4699579626A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{968A9EDF-B3A2-4210-84FE-A4699579626A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{968A9EDF-B3A2-4210-84FE-A4699579626A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{968A9EDF-B3A2-4210-84FE-A4699579626A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
